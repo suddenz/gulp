@@ -1,5 +1,25 @@
-$yellow: yellow;
+@import 'normalize.scss';
 
-h1{
-    background-color: $yellow;
+$fz: 20px;
+$color_1: red;
+
+.wrapper {
+    font-size: $fz*2;
+	border: 3px solid $color_1;
+	ul {
+		display: list-item;
+        list-style: none;
+	}
+}
+
+.link {
+    color: gray;
+    text-decoration: none;
+    &:hover {
+        color: $color_1;
+    }
+
+    .wrapper & {
+        font-size: $fz;
+    }
 }
